@@ -1,0 +1,64 @@
+
+
+Initial Forwarding Table for F: 
+
+-------------------------------------------------------------------
+
+Destination | 	Cost | 	Outgoing UDP Port | Destination UDP Port |
+
+		B		1		10005( Node F )		10001( Node B )	
+		C		1		10005( Node F )		10002( Node C )	
+		D		3		10005( Node F )		10003( Node D )	
+		E		3		10005( Node F )		10004( Node E )	
+
+-------------------------------------------------------------------
+------------------------------------------------------------------
+                       Updated Tables                              
+-------------------------------------------------------------------
+Fri Apr 12 16:41:18 2019
+
+updated DV table: 
+
+___________________________________________________
+
+Destination |	A	B	C	D	E
+
+Cost        |	4	1	1	3	3
+___________________________________________________
+
+Updated Forwarding Table
+-------------------------------------------------------------------
+
+Destination | 	Cost | 	Outgoing UDP Port | Next Hop UDP Port |
+
+	A			4			10005( Node F )		10004	
+	B			1			10005( Node F )		10001	
+	C			1			10005( Node F )		10002	
+	D			3			10005( Node F )		10003	
+	E			3			10005( Node F )		10004	
+
+-------------------------------------------------------------------
+
+Data Packet Recieved Fri Apr 12 16:41:23 2019
+
+Source ID: E
+Source Port: 10000
+Length: 10
+Forwarding Message to:D
+Message: Helloworld
+
+
+
+Forwarding to Node: D
+Next Hop port: 10003
+
+Message sent: 
+Type:DATA
+Source_ID:F
+Src Port:10000
+Length: 10
+Dest_Node:D
+Helloworld
+
+
+
